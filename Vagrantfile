@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "nginx" do |nginx|
     nginx.vm.box = "geerlingguy/centos7"
-    nginx.vm.network "forwarded_port", guest: 80, host: 81
+    nginx.vm.network "forwarded_port", guest: 80, host: 80
     nginx.vm.provision "shell", path: "nginx_install.sh"
   end
 end
